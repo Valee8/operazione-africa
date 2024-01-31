@@ -10,9 +10,11 @@ export default {
 </script>
 
 <template>
-    <h1>
-        {{ message }}
-    </h1>
+    <main>
+        <h1>
+            {{ message }}
+        </h1>
+    </main>
 </template>
 
 <style lang="scss" scoped>
