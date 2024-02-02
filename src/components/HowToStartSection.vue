@@ -59,12 +59,18 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../src/styles/general.scss' as *;
+@use '../src/styles/partials/mixins' as *;
+@use '../src/styles/partials/variables' as *;
+
+
 section {
+    padding-top: 200px;
     color: #fff;
     text-align: center;
 
     .container {
-        background-color: #E17153;
+        background-color: $orange-color;
         border-radius: 133px;
         padding: 60px;
 
@@ -94,7 +100,7 @@ section {
             padding: 50px 0 40px 0;
 
             .info {
-                width: calc(100% / 3);
+                width: calc(100% / 3 - 80px);
 
                 h3 {
                     font-size: 2rem;
