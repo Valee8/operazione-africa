@@ -1,19 +1,18 @@
 <script >
+
+import HowToStartSection from './HowToStartSection.vue';
+
 export default {
     name: "AppMain",
-    data() {
-        return {
-            message: "Main"
-        }
+    components: {
+        HowToStartSection
     }
 }
 </script>
 
 <template>
     <main>
-        <h1>
-            {{ message }}
-        </h1>
+        <HowToStartSection />
     </main>
 </template>
 
