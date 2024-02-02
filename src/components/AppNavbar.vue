@@ -46,6 +46,11 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../src/styles/general.scss' as *;
+@use '../src/styles/partials/mixins' as *;
+@use '../src/styles/partials/variables' as *;
+
+
 nav {
     width: 70%;
     height: 87px;

@@ -133,6 +133,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../src/styles/general.scss' as *;
+@use '../src/styles/partials/mixins' as *;
+@use '../src/styles/partials/variables' as *;
+
 .container {
     &.content {
         position: relative;
@@ -174,7 +178,7 @@ export default {
             font-size: 1.19rem;
             line-height: 33px;
             width: 611px;
-            padding-bottom: 320px;
+            padding-bottom: 340px;
 
         }
 
@@ -215,7 +219,7 @@ export default {
         gap: 20px;
         position: absolute;
         right: 0;
-        top: 30px;
+        top: 55px;
         z-index: 20;
 
         .card {
@@ -279,7 +283,7 @@ export default {
                     }
 
                     .price {
-                        color: #E17153;
+                        color: $orange-color;
                         font-size: 1.375rem;
                         font-weight: 600;
                     }
