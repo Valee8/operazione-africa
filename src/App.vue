@@ -24,6 +24,10 @@ export default {
 @use '../src/styles/partials/mixins' as *;
 @use '../src/styles/partials/variables' as *;
 
+section {
+  padding: 200px 0;
+}
+
 .button {
   background-color: #E17153;
   border-radius: 29px;
