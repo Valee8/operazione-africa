@@ -1,11 +1,13 @@
 <script >
 
 import HowToStartSection from './HowToStartSection.vue';
+import ListCardsSection from './ListCardsSection.vue';
 
 export default {
     name: "AppMain",
     components: {
-        HowToStartSection
+        HowToStartSection,
+        ListCardsSection
     }
 }
 </script>
@@ -13,12 +15,12 @@ export default {
 <template>
     <main>
         <HowToStartSection />
+        <ListCardsSection />
     </main>
 </template>
 
 <style lang="scss" scoped>
-h1 {
-    color: red;
-    text-align: center;
-}
+@use '../src/styles/general.scss' as *;
+@use '../src/styles/partials/mixins' as *;
+@use '../src/styles/partials/variables' as *;
 </style>
