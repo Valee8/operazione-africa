@@ -24,12 +24,12 @@ export default {
 @use '../src/styles/partials/mixins' as *;
 @use '../src/styles/partials/variables' as *;
 
-section {
-  padding: 200px 0;
-}
+// section {
+//   padding: 200px 0;
+// }
 
 .button {
-  background-color: #E17153;
+  background-color: $orange-color;
   border-radius: 29px;
   text-align: center;
 }
