@@ -84,7 +84,7 @@ nav {
                     width: 65px;
                     height: 87px;
                     z-index: 20;
-                    margin-right: -64px;
+                    margin-right: -63px;
                     border-radius: 0 47px 47px 0;
                 }
             }
