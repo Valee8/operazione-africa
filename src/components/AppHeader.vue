@@ -53,7 +53,7 @@ header {
       justify-content: space-between;
       align-items: center;
       position: relative;
-      top: -50px;
+      top: -60px;
 
       .logo {
         display: flex;

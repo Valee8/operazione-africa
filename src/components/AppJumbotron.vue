@@ -97,7 +97,7 @@ export default {
                 <div class="card small">
                     <ul class="content-card">
                         <li>
-                            <img src="/img/kid.png" alt="Immagine bambini" class="card-image">
+                            <img src="/img/kid.png" alt="Immagine bambino" class="card-image">
                         </li>
                         <li>
                             <span class="price">&dollar;20</span><span class="month">/MON</span>
@@ -150,7 +150,8 @@ export default {
         content: "";
         background-color: #458962;
         height: 254px;
-        width: 40%;
+        width: 52%;
+        border-radius: 0 90px 0 0;
         position: absolute;
         left: 0;
         bottom: 0;
@@ -159,7 +160,7 @@ export default {
 
     .content-left {
         padding-top: 100px;
-        width: 611px;
+        max-width: 52%;
 
 
         h6 {
@@ -171,7 +172,8 @@ export default {
             padding: 30px 0;
             font-weight: 700;
             font-size: 3.75rem;
-            width: 505px;
+            max-width: 505px;
+            line-height: 84px;
         }
 
         p {
@@ -179,10 +181,13 @@ export default {
             font-size: 1.19rem;
             line-height: 33px;
             padding-bottom: 260px;
+            max-width: 611px;
 
         }
 
         .numbers {
+            padding-right: 60px;
+
 
             .list-numbers {
                 display: flex;
@@ -190,10 +195,6 @@ export default {
                 align-items: center;
                 gap: 60px;
                 color: #fff;
-                text-align: left;
-                border-radius: 0 90px 0 0;
-                width: 780px;
-                background-color: #458962;
                 height: 254px;
                 position: relative;
                 z-index: 2;
@@ -216,25 +217,29 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 20px;
+        gap: 35px;
         position: absolute;
         right: 0;
         top: 0;
         z-index: 20;
 
         .card {
-            border-radius: 53px;
             border: 1px solid #000;
             background-color: #fff;
-            padding: 0 10px 30px 10px;
 
             &.big {
-                width: 480px;
+                border-radius: 53px;
+                max-width: 440px;
+                padding: 0 10px 30px 10px;
+
             }
 
             &.small {
-                width: 300px;
-                height: 528px;
+                max-width: 300px;
+                border-radius: 28px;
+                padding: 0 6px 20px 6px;
+
+
 
                 .content-card {
                     li {
