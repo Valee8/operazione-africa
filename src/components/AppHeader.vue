@@ -45,7 +45,6 @@ export default {
 
 
 header {
-  min-height: 900px;
 
   .container {
 
@@ -53,11 +52,8 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: absolute;
-      top: 28px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1;
+      position: relative;
+      top: -50px;
 
       .logo {
         display: flex;

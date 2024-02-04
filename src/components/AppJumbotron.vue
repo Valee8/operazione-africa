@@ -64,7 +64,7 @@ export default {
                 <div class="card big">
                     <ul class="content-card">
                         <li>
-                            <img src="/img/kids.png" alt="Immagine bambini" class="card-image">
+                            <img src="/img/kids.png" alt="Immagine bambini" class="card-image" width="420" height="320">
                         </li>
                         <li>
                             <span class="price">&dollar;20</span><span class="month">/MON</span>
@@ -159,6 +159,7 @@ export default {
 
     .content-left {
         padding-top: 100px;
+        width: 611px;
 
 
         h6 {
@@ -177,8 +178,7 @@ export default {
             font-weight: 400;
             font-size: 1.19rem;
             line-height: 33px;
-            width: 611px;
-            padding-bottom: 340px;
+            padding-bottom: 260px;
 
         }
 
@@ -219,7 +219,7 @@ export default {
         gap: 20px;
         position: absolute;
         right: 0;
-        top: 55px;
+        top: 0;
         z-index: 20;
 
         .card {
