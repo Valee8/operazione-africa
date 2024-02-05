@@ -106,9 +106,8 @@ section {
         align-items: center;
 
         h2 {
+            @include titles-h2;
             color: #242A2E;
-            font-size: 3.75rem;
-            font-weight: 700;
             width: 531px;
         }
 
