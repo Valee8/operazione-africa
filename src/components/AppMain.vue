@@ -2,12 +2,14 @@
 
 import HowToStartSection from './HowToStartSection.vue';
 import ListCardsSection from './ListCardsSection.vue';
+import FaqSection from './FaqSection.vue';
 
 export default {
     name: "AppMain",
     components: {
         HowToStartSection,
-        ListCardsSection
+        ListCardsSection,
+        FaqSection
     }
 }
 </script>
@@ -16,6 +18,7 @@ export default {
     <main>
         <HowToStartSection />
         <ListCardsSection />
+        <FaqSection />
     </main>
 </template>
 
