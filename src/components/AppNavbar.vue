@@ -52,7 +52,7 @@ export default {
 
 
 nav {
-    width: 70%;
+    width: 68%;
     height: 87px;
     padding-top: 28px;
 
@@ -64,7 +64,7 @@ nav {
         position: absolute;
         right: 0;
         top: 0;
-        width: 30%;
+        width: 32%;
     }
 
     ul {
