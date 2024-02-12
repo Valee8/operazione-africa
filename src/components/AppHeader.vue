@@ -23,7 +23,7 @@ export default {
 
     <div class="container top">
       <div class="logo">
-        <img src="/img/logo.png" alt="Logo Operazione Africa" class="logo-img" width="23" height="23">
+        <img src="/img/logo.png" alt="Logo Operazione Africa" class="logo-img" width="31" height="31">
         <span class="logo-text">
           Operazione Africa
         </span>
@@ -53,7 +53,7 @@ header {
       justify-content: space-between;
       align-items: center;
       position: relative;
-      top: -60px;
+      top: -47px;
 
       .logo {
         display: flex;
@@ -65,6 +65,7 @@ header {
           font-size: 1.25rem;
           font-weight: 700;
           color: #3A3A3A;
+          padding-left: 50px;
         }
       }
 

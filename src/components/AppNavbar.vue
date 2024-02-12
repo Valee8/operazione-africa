@@ -52,9 +52,9 @@ export default {
 
 
 nav {
-    width: 68%;
+    width: 67%;
     height: 87px;
-    padding-top: 28px;
+    padding-top: 55px;
 
 
     &::after {
@@ -64,7 +64,7 @@ nav {
         position: absolute;
         right: 0;
         top: 0;
-        width: 32%;
+        width: 33%;
     }
 
     ul {
@@ -86,10 +86,10 @@ nav {
                 &::after {
                     content: "";
                     background-color: #FFEAC1;
-                    width: 65px;
+                    width: 130px;
                     height: 87px;
                     z-index: 20;
-                    margin-right: -63px;
+                    margin-right: -127px;
                     border-radius: 0 47px 47px 0;
                 }
             }
