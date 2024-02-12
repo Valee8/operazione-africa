@@ -52,9 +52,10 @@ export default {
 
 
 nav {
-    width: 67%;
+    width: 70%;
     height: 87px;
-    padding-top: 55px;
+    padding-top: 28px;
+    //margin-left: 113px;
 
 
     &::after {
@@ -64,7 +65,7 @@ nav {
         position: absolute;
         right: 0;
         top: 0;
-        width: 33%;
+        width: 36%;
     }
 
     ul {
@@ -72,26 +73,21 @@ nav {
         justify-content: flex-end;
         align-items: center;
         gap: 51px;
-        height: 100%;
+        height: 87px;
 
         li {
             position: relative;
             z-index: 20;
             font-size: 1.06rem;
+            height: 87px;
+            line-height: 87px;
 
             &:last-child {
-                display: flex;
-                align-items: center;
-
-                &::after {
-                    content: "";
-                    background-color: #FFEAC1;
-                    width: 130px;
-                    height: 87px;
-                    z-index: 20;
-                    margin-right: -127px;
-                    border-radius: 0 47px 47px 0;
-                }
+                background-image: url('/img/rectangle.png');
+                background-size: cover;
+                background-position: right;
+                background-repeat: no-repeat;
+                width: 114px;
             }
 
             a {
