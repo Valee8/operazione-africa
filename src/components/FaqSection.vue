@@ -47,14 +47,16 @@ export default {
                     Et felis vitae ac venenatis lacus cras etiam risus scelerisque auctor adipiscing in a porta
                 </p>
 
-                <img src="/img/arrow-shape.png" alt="Immagine freccia">
+                <img src="/img/arrow-shape.png" alt="Immagine freccia" width="222" height="244" class="arrow">
             </div>
 
             <div class="section-right">
                 <ul class="list-faq">
-                    <li v-for="(faq, index) in listFaq" :key="index">
-                        {{ faq.question }}
-                        <span @click="faq.active = !faq.active" class="arrows">
+                    <li v-for="(faq, index) in listFaq" :key="index" @click="faq.active = !faq.active">
+                        <span :class="{ 'orange': faq.active }">
+                            {{ faq.question }}
+                        </span>
+                        <span class="arrows">
                             <span v-if="!faq.active">
                                 <i class="fa-solid fa-chevron-down"></i>
                             </span>
@@ -87,7 +89,7 @@ section {
 
 
         .section-left {
-            width: 40%;
+            width: 30%;
         }
 
         .section-right {
@@ -96,7 +98,13 @@ section {
 
         .section-left {
             h2 {
-                @include titles-h2;
+                font-size: 3rem;
+                line-height: 74px;
+            }
+
+            .arrow {
+                margin: 0 auto;
+                display: block;
             }
         }
 
@@ -114,6 +122,10 @@ section {
                     margin: 10px 0;
                     font-weight: 600;
                     padding: 30px 15px;
+
+                    .orange {
+                        color: $orange-color;
+                    }
                 }
             }
         }

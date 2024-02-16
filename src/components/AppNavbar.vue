@@ -33,14 +33,14 @@ export default {
 <template>
     <nav>
         <ul>
-            <li v-for="(link, index) in linksNav" :key="index">
+            <li v-for="(link, index) in linksNav" :key="index" :class="{ 'last': index === linksNav.length - 1 }">
                 <a :href="link.href">
                     {{ link.text }}
                 </a>
             </li>
-            <li>
+            <!-- <li>
                 Bandiere
-            </li>
+            </li> -->
         </ul>
     </nav>
 </template>
@@ -52,7 +52,7 @@ export default {
 
 
 nav {
-    width: 70%;
+    width: 72%;
     height: 87px;
     padding-top: 28px;
     //margin-left: 113px;
@@ -65,7 +65,7 @@ nav {
         position: absolute;
         right: 0;
         top: 0;
-        width: 36%;
+        width: 38%;
     }
 
     ul {
@@ -76,19 +76,27 @@ nav {
         height: 87px;
 
         li {
+            display: flex;
+            //justify-content: space-between;
+            align-items: center;
+            //gap: 30px;
             position: relative;
             z-index: 20;
             font-size: 1.06rem;
             height: 87px;
             line-height: 87px;
 
-            &:last-child {
-                background-image: url('/img/rectangle.png');
-                background-size: cover;
-                background-position: right;
-                background-repeat: no-repeat;
-                width: 114px;
-            }
+            // &.last {
+            //     background-image: url('/img/rectangle2.png');
+            //     background-size: cover;
+            //     background-position: right;
+            //     background-repeat: no-repeat;
+            //     width: 228px;
+
+            //     // a {
+            //     //     padding-right: 20px;
+            //     // }
+            // }
 
             a {
                 color: #000;
