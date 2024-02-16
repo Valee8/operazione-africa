@@ -102,7 +102,6 @@ export default {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  margin-left: 60px;
 }
 
 .wg-list.country-selector {
@@ -112,11 +111,11 @@ export default {
 }
 
 .weglot-container {
-  background-image: url('/img/rectangle2.png');
+  background-image: url('/img/rectangle3.png');
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
-  width: 228px;
+  width: 158px;
   height: 87px;
 }
 </style>

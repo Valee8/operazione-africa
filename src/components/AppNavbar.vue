@@ -33,14 +33,13 @@ export default {
 <template>
     <nav>
         <ul>
-            <li v-for="(link, index) in linksNav" :key="index" :class="{ 'last': index === linksNav.length - 1 }">
+            <li v-for="(link, index) in linksNav" :key="index">
                 <a :href="link.href">
                     {{ link.text }}
                 </a>
             </li>
-            <!-- <li>
-                Bandiere
-            </li> -->
+            <li class="last">
+            </li>
         </ul>
     </nav>
 </template>
@@ -52,7 +51,7 @@ export default {
 
 
 nav {
-    width: 72%;
+    width: 62%;
     height: 87px;
     padding-top: 28px;
     //margin-left: 113px;
@@ -85,6 +84,10 @@ nav {
             font-size: 1.06rem;
             height: 87px;
             line-height: 87px;
+
+            &.last {
+                margin-right: -157px;
+            }
 
             // &.last {
             //     background-image: url('/img/rectangle2.png');
