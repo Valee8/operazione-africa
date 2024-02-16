@@ -21,7 +21,7 @@ export default {
                     href: "/"
                 },
                 {
-                    text: "Contact Us",
+                    text: "Get in Touch",
                     href: "/"
                 }
             ]
