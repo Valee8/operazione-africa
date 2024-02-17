@@ -3,22 +3,27 @@
 import HowToStartSection from './HowToStartSection.vue';
 import ListCardsSection from './ListCardsSection.vue';
 import FaqSection from './FaqSection.vue';
+import AboutUsSection from './AboutUsSection.vue';
 
 export default {
     name: "AppMain",
     components: {
         HowToStartSection,
         ListCardsSection,
-        FaqSection
+        FaqSection,
+        AboutUsSection
     }
 }
 </script>
 
 <template>
     <main>
-        <HowToStartSection />
-        <ListCardsSection />
-        <FaqSection />
+        <div :class="{ 'home': $route.name === 'home' || $route.name === '' }">
+            <HowToStartSection />
+            <ListCardsSection />
+            <FaqSection />
+        </div>
+        <AboutUsSection v-if="$route.name === 'about-us'" />
     </main>
 </template>
 
@@ -26,4 +31,8 @@ export default {
 @use '../src/styles/general.scss' as *;
 @use '../src/styles/partials/mixins' as *;
 @use '../src/styles/partials/variables' as *;
+
+div:not(.home) {
+    display: none;
+}
 </style>
