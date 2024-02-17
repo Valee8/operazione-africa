@@ -1,30 +1,64 @@
 <script >
+
+//import { store } from '../store';
+
 export default {
     name: "AppNavbar",
     data() {
         return {
+            //store
             linksNav: [
                 {
                     text: "Home",
-                    href: "/"
+                    name: "home",
+                    active: true
                 },
                 {
                     text: "About Us",
-                    href: "/"
+                    name: "about-us",
+                    active: false
                 },
                 {
                     text: "Services",
-                    href: "/"
+                    href: "/",
+                    active: false
                 },
                 {
                     text: "Teams",
-                    href: "/"
+                    href: "/",
+                    active: false
                 },
                 {
                     text: "Get in Touch",
-                    href: "/"
+                    href: "/",
+                    active: false
                 }
             ]
+        }
+    },
+    watch: {
+        $route(to, from) {
+
+            let hash = parseInt(to.hash.replace(/[^0-9]+/g, ''), 10);
+
+            if (to.hash) {
+                this.linksNav[hash].active = true;
+
+                for (let i = 0; i < this.linksNav.length; i++) {
+                    if (i !== hash) {
+                        this.linksNav[i].active = false;
+                    }
+                }
+            }
+            else {
+                this.linksNav[0].active = true;
+
+                for (let i = 0; i < this.linksNav.length; i++) {
+                    if (i !== 0) {
+                        this.linksNav[i].active = false;
+                    }
+                }
+            }
         }
     }
 }
@@ -34,9 +68,13 @@ export default {
     <nav>
         <ul>
             <li v-for="(link, index) in linksNav" :key="index">
-                <a :href="link.href">
+                <router-link :to="{
+                    name: link.name,
+                    params: index !== 0 ? { id: index } : {},
+                    hash: index !== 0 ? '#' + link.name + index : ''
+                }" :class="{ 'active': link.active }">
                     {{ link.text }}
-                </a>
+                </router-link>
             </li>
             <li class="last">
             </li>
@@ -86,7 +124,7 @@ nav {
             line-height: 87px;
 
             &.last {
-                margin-right: -157px;
+                margin-right: -156px;
             }
 
             // &.last {
@@ -103,6 +141,11 @@ nav {
 
             a {
                 color: #000;
+
+                &.active {
+                    color: #00715D;
+                    font-weight: 700;
+                }
             }
         }
     }
