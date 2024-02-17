@@ -3,6 +3,8 @@ import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
 
+//import { store } from './store';
+
 Weglot.initialize({
   api_key: 'wg_4e85190efbdc305ae35267e66fd4b2db8',
   switchers: [
@@ -28,7 +30,12 @@ export default {
     AppHeader,
     AppMain,
     AppFooter
-  }
+  },
+  data() {
+    return {
+      //store
+    }
+  },
 }
 </script>
 
@@ -42,10 +49,6 @@ export default {
 @use '../src/styles/general.scss' as *;
 @use '../src/styles/partials/mixins' as *;
 @use '../src/styles/partials/variables' as *;
-
-// section {
-//   padding: 200px 0;
-// }
 
 .button {
   background-color: $orange-color;
@@ -67,12 +70,6 @@ export default {
 }
 
 .wg-list.country-selector {
-  .wgcurrent {
-    align-self: flex-start;
-  }
-}
-
-.wg-list.country-selector {
   ul {
     align-self: flex-end;
     height: 33px;
@@ -89,11 +86,11 @@ export default {
   }
 }
 
-.wg-list.country-selector {
-  a {
-    padding: 0;
-  }
-}
+// .wg-list.country-selector {
+//   a {
+//     padding: 0;
+//   }
+// }
 
 .wg-list.country-selector {
   display: flex;
@@ -110,7 +107,7 @@ export default {
   }
 }
 
-.weglot-container {
+.last {
   background-image: url('/img/rectangle3.png');
   background-size: cover;
   background-position: right;
