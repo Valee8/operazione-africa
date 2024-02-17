@@ -107,11 +107,18 @@ export default {
   }
 }
 
+nav {
+  &.home {
+    .last {
+      background-image: url('/img/rectangle3.png');
+      background-size: cover;
+      background-position: right;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
 .last {
-  background-image: url('/img/rectangle3.png');
-  background-size: cover;
-  background-position: right;
-  background-repeat: no-repeat;
   width: 158px;
   height: 87px;
 }

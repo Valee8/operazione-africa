@@ -5,131 +5,137 @@ export default {
 </script>
 
 <template>
-    <div class="jumbotron" :class="{ 'home': $route.name === 'home' || $route.name === '' }">
-        <div class="container center">
+    <div class="jumbotron"
+        :class="{ 'home': $route.name === 'home' || $route.name === '', 'not-home': $route.name !== 'home' }">
+        <div class="content home">
+            <div class="container center">
 
-            <div class="content-left">
+                <div class="content-left">
 
-                <h6>
-                    Operazione Africa
-                </h6>
+                    <h6>
+                        Operazione Africa
+                    </h6>
 
-                <h1>
-                    Being Part Of Aid Foundation Is A Way To Share
-                </h1>
+                    <h1>
+                        Being Part Of Aid Foundation Is A Way To Share
+                    </h1>
 
-                <p>
-                    Lorem ipsum dolor sit amet consectetur. Ultrices ultrices pulvinar maecenas neque. Sit tellus nunc enim
-                    cursus
-                    dolor ultrices sit ullamcorper aliqueorem aliquet.
-                </p>
-            </div>
-
-            <div class="content-right">
-                <div class="card big">
-                    <ul class="content-card">
-                        <li>
-                            <img src="/img/kids.png" alt="Immagine bambini" class="card-image" width="303" height="256">
-                        </li>
-                        <li>
-                            <span class="price">&dollar;20</span><span class="month">/MON</span>
-
-                            <div>
-                                or make one time Donation
-                            </div>
-                        </li>
-
-                        <li>
-                            <h3>
-                                Share Food With Others In Need
-                            </h3>
-                        </li>
-
-                        <li>
-                            <p>
-                                Lorem ipsum dolor sit amet consecpsum dolortet.
-                            </p>
-                        </li>
-
-                        <li>
-                            <a href="/" class="button donate">
-                                Donate Now
-                            </a>
-                        </li>
-                    </ul>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur. Ultrices ultrices pulvinar maecenas neque. Sit tellus nunc
+                        enim
+                        cursus
+                        dolor ultrices sit ullamcorper aliqueorem aliquet.
+                    </p>
                 </div>
 
-                <div class="card small">
-                    <ul class="content-card">
-                        <li>
-                            <img src="/img/kid.png" alt="Immagine bambino" class="card-image" width="226" height="191">
-                        </li>
-                        <li>
-                            <span class="price">&dollar;20</span><span class="month">/MON</span>
+                <div class="content-right">
+                    <div class="card big">
+                        <ul class="content-card">
+                            <li>
+                                <img src="/img/kids.png" alt="Immagine bambini" class="card-image" width="303" height="256">
+                            </li>
+                            <li>
+                                <span class="price">&dollar;20</span><span class="month">/MON</span>
 
-                            <div>
-                                or make one time Donation
-                            </div>
-                        </li>
+                                <div>
+                                    or make one time Donation
+                                </div>
+                            </li>
 
-                        <li>
-                            <h3>
-                                Share Food With Others In Need
-                            </h3>
-                        </li>
+                            <li>
+                                <h3>
+                                    Share Food With Others In Need
+                                </h3>
+                            </li>
 
-                        <li>
-                            <p>
-                                Lorem ipsum dolor sit amet consecpsum dolortet.
-                            </p>
-                        </li>
+                            <li>
+                                <p>
+                                    Lorem ipsum dolor sit amet consecpsum dolortet.
+                                </p>
+                            </li>
 
-                        <li>
-                            <a href="/" class="button donate">
-                                Donate Now
-                            </a>
-                        </li>
-                    </ul>
+                            <li>
+                                <a href="/" class="button donate">
+                                    Donate Now
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card small">
+                        <ul class="content-card">
+                            <li>
+                                <img src="/img/kid.png" alt="Immagine bambino" class="card-image" width="226" height="191">
+                            </li>
+                            <li>
+                                <span class="price">&dollar;20</span><span class="month">/MON</span>
+
+                                <div>
+                                    or make one time Donation
+                                </div>
+                            </li>
+
+                            <li>
+                                <h3>
+                                    Share Food With Others In Need
+                                </h3>
+                            </li>
+
+                            <li>
+                                <p>
+                                    Lorem ipsum dolor sit amet consecpsum dolortet.
+                                </p>
+                            </li>
+
+                            <li>
+                                <a href="/" class="button donate">
+                                    Donate Now
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+
             </div>
 
+
+            <div class="container bottom">
+
+                <ul class="list-numbers">
+                    <li>
+                        <div class="number">
+                            145&plus;
+                        </div>
+
+                        <div class="text">
+                            Archived Compaigns
+                        </div>
+                    </li>
+                    <li>
+                        <div class="number">
+                            1200&plus;
+                        </div>
+
+                        <div class="text">
+                            Donation Riceived
+                        </div>
+                    </li>
+                    <li>
+                        <div class="number">
+                            545&plus;
+                        </div>
+
+                        <div class="text">
+                            Clarity in the Last Year
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
 
-
-        <div class="container bottom">
-
-            <ul class="list-numbers">
-                <li>
-                    <div class="number">
-                        145&plus;
-                    </div>
-
-                    <div class="text">
-                        Archived Compaigns
-                    </div>
-                </li>
-                <li>
-                    <div class="number">
-                        1200&plus;
-                    </div>
-
-                    <div class="text">
-                        Donation Riceived
-                    </div>
-                </li>
-                <li>
-                    <div class="number">
-                        545&plus;
-                    </div>
-
-                    <div class="text">
-                        Clarity in the Last Year
-                    </div>
-                </li>
-            </ul>
+        <div class="content" :class="{ 'about-us': $route.name === 'about-us' }">
+            Home > About Us
         </div>
-
-
     </div>
 </template>
 
@@ -141,24 +147,39 @@ export default {
 .jumbotron {
     position: relative;
 
-    &:not(.home) {
-        display: none;
+    &.home {
+        &::before {
+            content: "";
+            background-color: #458962;
+            height: 254px;
+            width: 65%;
+            border-radius: 0 90px 0 0;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        .content {
+            &:not(.home) {
+                display: none;
+            }
+        }
     }
 
-    &::before {
-        content: "";
-        background-color: #458962;
-        height: 254px;
-        width: 65%;
-        border-radius: 0 90px 0 0;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        z-index: 1;
+    &.not-home {
+        .content {
+            &.home {
+                display: none;
+            }
+
+            &.about-us {
+                text-align: center;
+            }
+        }
     }
 
     .container {
-
         &.center {
             display: flex;
             justify-content: space-between;
@@ -321,6 +342,7 @@ export default {
                 height: 254px;
                 position: relative;
                 z-index: 2;
+                width: 65%;
 
                 li {
                     //margin: 0 50px;

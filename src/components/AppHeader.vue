@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-  <header>
+  <header :class="{ 'home': $route.name === 'home' || $route.name === '' }">
     <AppNavbar />
 
     <AppLogo />
@@ -33,4 +33,10 @@ export default {
 @use '../src/styles/general.scss' as *;
 @use '../src/styles/partials/mixins' as *;
 @use '../src/styles/partials/variables' as *;
+
+header {
+  &:not(.home) {
+    background-color: #C4C4C4;
+  }
+}
 </style>

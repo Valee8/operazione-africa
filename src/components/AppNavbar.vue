@@ -65,13 +65,13 @@ export default {
 </script>
 
 <template>
-    <nav>
+    <nav :class="{ 'home': $route.name === 'home' || $route.name === '' }">
         <ul>
             <li v-for="(link, index) in linksNav" :key="index">
                 <router-link :to="{
                     name: link.name,
                     params: index !== 0 ? { id: index } : {},
-                    hash: index !== 0 ? '#' + link.name + index : ''
+                    hash: index !== 0 ? '#' + link.name + '-' + index : ''
                 }" :class="{ 'active': link.active }">
                     {{ link.text }}
                 </router-link>
@@ -94,27 +94,29 @@ nav {
     padding-top: 28px;
     //margin-left: 113px;
 
-
-    &::after {
-        content: "";
-        background-color: #458962;
-        height: 732px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 38%;
+    &.home {
+        &::after {
+            content: "";
+            background-color: #458962;
+            height: 732px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 38%;
+        }
     }
 
     ul {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        gap: 51px;
+        //gap: 51px;
+        gap: 25px;
         height: 87px;
 
         li {
             display: flex;
-            //justify-content: space-between;
+            //justify-content: center;
             align-items: center;
             //gap: 30px;
             position: relative;
@@ -122,6 +124,11 @@ nav {
             font-size: 1.06rem;
             height: 87px;
             line-height: 87px;
+
+            &:not(.last) {
+                width: 100px;
+                justify-content: center;
+            }
 
             &.last {
                 margin-right: -156px;
