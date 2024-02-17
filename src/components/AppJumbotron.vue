@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-    <div class="jumbotron">
+    <div class="jumbotron" :class="{ 'home': $route.name === 'home' || $route.name === '' }">
         <div class="container center">
 
             <div class="content-left">
@@ -140,6 +140,10 @@ export default {
 
 .jumbotron {
     position: relative;
+
+    &:not(.home) {
+        display: none;
+    }
 
     &::before {
         content: "";
