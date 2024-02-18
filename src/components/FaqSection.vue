@@ -47,7 +47,7 @@ export default {
                     Et felis vitae ac venenatis lacus cras etiam risus scelerisque auctor adipiscing in a porta
                 </p>
 
-                <img src="/img/arrow-shape.png" alt="Immagine freccia" width="222" height="244" class="arrow">
+                <img src="/img/arrow-shape.png" alt="Immagine freccia" width="222" height="244" class="big-arrow">
             </div>
 
             <div class="section-right">
@@ -60,11 +60,11 @@ export default {
                             <span v-if="!faq.active">
                                 <i class="fa-solid fa-chevron-down"></i>
                             </span>
-                            <span v-else>
+                            <span v-else class="arrow-up">
                                 <i class="fa-solid fa-chevron-up"></i>
                             </span>
                         </span>
-                        <div v-if="faq.active">
+                        <div v-if="faq.active" class="answer">
                             {{ faq.answer }}
                         </div>
                     </li>
@@ -102,7 +102,12 @@ section {
                 line-height: 74px;
             }
 
-            .arrow {
+            p {
+                padding-top: 20px;
+                padding-bottom: 50px;
+            }
+
+            .big-arrow {
                 margin: 0 auto;
                 display: block;
             }
@@ -119,12 +124,25 @@ section {
                     background-color: #fff;
                     border-radius: 18px;
                     border: 1px solid #000;
-                    margin: 10px 0;
+                    margin: 15px 0;
                     font-weight: 600;
-                    padding: 30px 15px;
+                    padding: 30px 20px;
 
                     .orange {
                         color: $orange-color;
+                    }
+
+                    .arrows {
+
+                        .arrow-up {
+                            color: #448C74;
+                        }
+                    }
+
+                    .answer {
+                        padding-top: 10px;
+                        font-weight: 400;
+                        padding-right: 30px;
                     }
                 }
             }
