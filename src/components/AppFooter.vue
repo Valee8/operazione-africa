@@ -56,7 +56,7 @@ export default {
 @use '../src/styles/partials/variables' as *;
 
 footer {
-    padding-top: 150px;
+    padding-top: 100px;
     font-size: 1.25rem;
     color: #3D3D3D;
 
