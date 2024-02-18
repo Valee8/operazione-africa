@@ -97,7 +97,7 @@ nav {
     &.home {
         &::after {
             content: "";
-            background-color: #458962;
+            background-color: $green-color;
             height: 732px;
             position: absolute;
             right: 0;
@@ -111,7 +111,7 @@ nav {
         justify-content: flex-end;
         align-items: center;
         //gap: 51px;
-        gap: 25px;
+        gap: 20px;
         height: 87px;
 
         li {
@@ -126,7 +126,7 @@ nav {
             line-height: 87px;
 
             &:not(.last) {
-                width: 100px;
+                width: 105px;
                 justify-content: center;
             }
 

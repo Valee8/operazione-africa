@@ -150,7 +150,7 @@ export default {
     &.home {
         &::before {
             content: "";
-            background-color: #458962;
+            background-color: $green-color;
             height: 254px;
             width: 65%;
             border-radius: 0 90px 0 0;
