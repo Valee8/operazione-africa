@@ -3,6 +3,7 @@
 import HowToStartSection from './HowToStartSection.vue';
 import ListCardsSection from './ListCardsSection.vue';
 import FaqSection from './FaqSection.vue';
+import NewsletterSection from './NewsletterSection.vue';
 import AboutUsSection from './AboutUsSection.vue';
 
 export default {
@@ -11,6 +12,7 @@ export default {
         HowToStartSection,
         ListCardsSection,
         FaqSection,
+        NewsletterSection,
         AboutUsSection
     }
 }
@@ -22,6 +24,7 @@ export default {
             <HowToStartSection />
             <ListCardsSection />
             <FaqSection />
+            <NewsletterSection />
         </div>
         <AboutUsSection v-if="$route.name === 'about-us'" />
     </main>
