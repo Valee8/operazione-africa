@@ -105,6 +105,7 @@ section {
             p {
                 padding-top: 20px;
                 padding-bottom: 50px;
+                //font-size: 1.19rem;
             }
 
             .big-arrow {

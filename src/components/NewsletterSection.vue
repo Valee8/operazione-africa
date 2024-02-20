@@ -78,7 +78,7 @@ section {
                     background-color: #fff;
                     padding-left: 30px;
                     color: #3D3D3D;
-                    width: 560px;
+                    width: 580px;
                     font-weight: 500;
                     height: 75px;
                     line-height: 75px;

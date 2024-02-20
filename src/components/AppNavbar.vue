@@ -89,12 +89,13 @@ export default {
 
 
 nav {
-    width: 62%;
     height: 87px;
     padding-top: 28px;
     //margin-left: 113px;
 
     &.home {
+        width: 63%;
+
         &::after {
             content: "";
             background-color: $green-color;
@@ -102,8 +103,13 @@ nav {
             position: absolute;
             right: 0;
             top: 0;
-            width: 38%;
+            width: 37%;
         }
+    }
+
+    &:not(.home) {
+        display: flex;
+        justify-content: center;
     }
 
     ul {

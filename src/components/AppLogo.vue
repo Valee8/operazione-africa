@@ -6,7 +6,7 @@ export default {
 </script>
 
 <template>
-    <div class="container top">
+    <div class="container top" :class="{ 'home': $route.name === 'home' }">
         <div class="logo">
             <img src="/img/logo.png" alt="Logo Operazione Africa" class="logo-img" width="31" height="31">
             <span class="logo-text">
@@ -31,7 +31,10 @@ export default {
         justify-content: space-between;
         align-items: center;
         position: relative;
-        top: -47px;
+
+        &.home {
+            top: -47px;
+        }
 
         .logo {
             display: flex;

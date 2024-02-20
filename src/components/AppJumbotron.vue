@@ -30,69 +30,71 @@ export default {
 
                 <div class="content-right">
                     <div class="card big">
-                        <ul class="content-card">
-                            <li>
-                                <img src="/img/kids.png" alt="Immagine bambini" class="card-image" width="303" height="256">
-                            </li>
-                            <li>
-                                <span class="price">&dollar;20</span><span class="month">/MON</span>
+                        <div class="content-card">
+                            <img src="/img/kids.png" alt="Immagine bambini" class="card-image" width="303" height="256">
 
-                                <div>
-                                    or make one time Donation
+                            <div class="content-text">
+                                <div class="price-month">
+                                    <span class="price">
+                                        &dollar;20
+                                    </span>
+
+                                    <span class="month">
+                                        /MON
+                                    </span>
+
+                                    <div>
+                                        or make one time Donation
+                                    </div>
                                 </div>
-                            </li>
 
-                            <li>
                                 <h3>
                                     Share Food With Others In Need
                                 </h3>
-                            </li>
 
-                            <li>
                                 <p>
                                     Lorem ipsum dolor sit amet consecpsum dolortet.
                                 </p>
-                            </li>
 
-                            <li>
                                 <a href="/" class="button donate">
                                     Donate Now
                                 </a>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="card small">
-                        <ul class="content-card">
-                            <li>
-                                <img src="/img/kid.png" alt="Immagine bambino" class="card-image" width="226" height="191">
-                            </li>
-                            <li>
-                                <span class="price">&dollar;20</span><span class="month">/MON</span>
+                        <div class="content-card">
+                            <img src="/img/kid.png" alt="Immagine bambino" class="card-image" width="240" height="190">
 
-                                <div>
-                                    or make one time Donation
+                            <div class="content-text">
+                                <div class="price-month">
+                                    <span class="price">
+                                        &dollar;20
+                                    </span>
+
+                                    <span class="month">
+                                        /MON
+                                    </span>
+
+                                    <div>
+                                        or make one time Donation
+                                    </div>
                                 </div>
-                            </li>
 
-                            <li>
                                 <h3>
                                     Share Food With Others In Need
                                 </h3>
-                            </li>
 
-                            <li>
                                 <p>
                                     Lorem ipsum dolor sit amet consecpsum dolortet.
                                 </p>
-                            </li>
 
-                            <li>
                                 <a href="/" class="button donate">
                                     Donate Now
                                 </a>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -174,7 +176,13 @@ export default {
             }
 
             &.about-us {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 text-align: center;
+                min-height: 600px;
+                color: #fff;
+                font-size: 2rem;
             }
         }
     }
@@ -224,22 +232,38 @@ export default {
                 .card {
                     border: 1px solid #000;
                     background-color: #fff;
+                    position: relative;
 
                     &.big {
                         border-radius: 53px;
                         max-width: 303px;
-                        padding: 0 10px 30px 10px;
+                        padding: 10px 10px 20px 10px;
 
                         .content-card {
-                            li {
+                            .content-text {
+                                padding: 0 16px;
+
                                 h3 {
                                     font-weight: 500;
-                                    font-size: 1.25rem;
+                                    font-size: 1.5rem;
                                 }
 
-                                .price {
-                                    font-size: 1.375rem;
-                                    font-weight: 600;
+                                p {
+                                    padding: 15px 0;
+                                }
+
+                                .price-month {
+                                    padding: 10px 0;
+
+                                    .price {
+                                        font-size: 1.5rem;
+                                    }
+                                }
+
+                                .donate {
+                                    height: 35px;
+                                    line-height: 35px;
+                                    font-size: 1.3rem;
                                 }
                             }
                         }
@@ -247,60 +271,59 @@ export default {
                     }
 
                     &.small {
-                        max-width: 226px;
+                        max-width: 240px;
                         border-radius: 28px;
-                        padding: 0 6px 20px 6px;
+                        padding: 4px 4px 15px 4px;
+                        top: 180px;
 
                         .content-card {
-                            li {
+
+                            .content-text {
+                                padding: 0 10px;
+
+                                .price-month {
+                                    padding: 5px 0;
+                                }
 
                                 h3 {
                                     font-size: 1.125rem;
                                 }
 
                                 p {
-                                    font-size: 0.5rem;
+                                    font-size: 0.8rem;
+                                    padding: 8px 0;
                                 }
 
                                 .donate {
                                     height: 37px;
                                     line-height: 37px;
-                                    font-size: 0.75rem;
+                                    font-size: 0.9rem;
                                 }
                             }
                         }
                     }
 
                     .content-card {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex-wrap: wrap;
 
-                        li {
-                            padding: 10px 0;
+                        .card-image {
+                            display: block;
+                        }
 
-                            &:not(:first-child) {
-                                width: 100%;
-                                margin: 0 10px;
-                            }
+                        .content-text {
+                            .price-month {
 
-                            .card-image {
-                                display: block;
-                            }
 
-                            .price {
-                                color: $orange-color;
-                            }
+                                .price {
+                                    color: $orange-color;
+                                    font-size: 1.2rem;
+                                    font-weight: 600;
+                                }
 
-                            .month,
-                            div {
-                                font-size: 0.75rem;
-                                color: #383F42;
-                            }
-
-                            div {
-                                padding-top: 10px;
+                                .month,
+                                div {
+                                    font-size: 1.1rem;
+                                    color: #383F42;
+                                }
                             }
 
                             h3 {
@@ -309,19 +332,16 @@ export default {
 
                             p {
                                 font-weight: 400;
-                                font-size: 1.125rem;
                                 color: gray;
                             }
 
                             .donate {
                                 display: block;
                                 width: 100%;
-                                height: 61px;
-                                line-height: 61px;
                                 color: #fff;
                                 text-align: center;
-                                font-size: 1.75rem;
                                 font-weight: 700;
+                                margin: 0 auto;
                             }
                         }
                     }

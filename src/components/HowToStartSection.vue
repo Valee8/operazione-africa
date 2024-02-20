@@ -83,12 +83,13 @@ section {
         h2+p {
             max-width: 750px;
             margin: 0 auto;
+            font-size: 1.19rem;
         }
 
         p {
             color: #D8D8D8;
             font-weight: 400;
-            font-size: 1rem;
+            font-size: 1.19rem;
             line-height: 28px;
         }
 
