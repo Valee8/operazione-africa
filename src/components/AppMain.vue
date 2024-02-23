@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-    <main>
+    <main :class="{ 'home': $route.name === 'home' || $route.name === '' }">
         <div :class="{ 'home': $route.name === 'home' || $route.name === '' }">
             <HowToStartSection />
             <ListCardsSection />
@@ -35,7 +35,13 @@ export default {
 @use '../src/styles/partials/mixins' as *;
 @use '../src/styles/partials/variables' as *;
 
-div:not(.home) {
-    display: none;
+main {
+    &:not(.home) {
+        background-color: #fff;
+    }
+
+    div:not(.home) {
+        display: none;
+    }
 }
 </style>
