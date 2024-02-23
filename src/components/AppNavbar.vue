@@ -110,6 +110,7 @@ nav {
     &:not(.home) {
         display: flex;
         justify-content: center;
+        margin-left: -70px;
     }
 
     ul {
